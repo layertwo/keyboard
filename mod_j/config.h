@@ -21,8 +21,8 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #include "config_common.h"
 
 /* USB Device descriptor parameter */
-#define VENDOR_ID       0xFEED
-#define PRODUCT_ID      0x6060
+#define VENDOR_ID       0xDEAD
+#define PRODUCT_ID      0xBEEF
 #define DEVICE_VER      0x0003
 #define MANUFACTURER    SATAN
 #define PRODUCT         GH60
@@ -38,7 +38,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_COL_PINS { F0, F1, E6, C7, C6, B7, D4, B1, B0, B5, B4, D7, D6, B3 }
 #define UNUSED_PINS
 
-#define BACKLIGHT_PIN B6
 
 /* COL2ROW or ROW2COL */
 #define DIODE_DIRECTION COL2ROW
@@ -61,7 +60,10 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Backlight configuration
  */
-#define BACKLIGHT_LEVELS 4
+#define BACKLIGHT_LEVELS 7
+#define BACKLIGHT_PIN B6
+#define BACKLIGHT_BREATHING
+#define BREATHING_PERIOD 6
 
 /* Underlight configuration
  */
@@ -92,5 +94,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 //#define NO_ACTION_FUNCTION
 
 #define TAPPING_TERM 200
+
 
 #endif
