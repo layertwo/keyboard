@@ -1,9 +1,8 @@
 #include QMK_KEYBOARD_H
-#include "quantum.h"
 
 enum custom_keycodes {
     MACRO_ENT_L_DEF= SAFE_RANGE,
-    TD_RCTL_LOCK = 0
+//    TD_RCTL_LOCK = 0
 };
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
