@@ -5,3 +5,4 @@ make clean
 git pull
 make satan:layertwo
 make atreus62:layertwo
+make lily58:layertwo
