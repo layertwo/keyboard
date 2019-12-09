@@ -20,12 +20,20 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 #include "config_common.h"
 
+#define FORCE_NKRO
+
 /* USB Device descriptor parameter */
+#undef VENDOR_ID
 #define VENDOR_ID       0xDEAD
+#undef PRODUCT_ID
 #define PRODUCT_ID      0xBEEF
+#undef DEVICE_VER
 #define DEVICE_VER      0x0003
+#undef MANUFACTURER
 #define MANUFACTURER    SATAN
+#undef PRODUCT
 #define PRODUCT         GH60
+#undef DESCRIPTION
 #define DESCRIPTION     QMK keyboard firmware for Satan GH60 with WS2812 support
 
 /* key matrix size */
@@ -37,7 +45,6 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 #define MATRIX_ROW_PINS { D0, D1, D2, D3, D5 }
 #define MATRIX_COL_PINS { F0, F1, E6, C7, C6, B7, D4, B1, B0, B5, B4, D7, D6, B3 }
 #define UNUSED_PINS
-
 
 /* COL2ROW or ROW2COL */
 #define DIODE_DIRECTION COL2ROW
@@ -60,39 +67,11 @@ along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 /* Backlight configuration
  */
+#undef BACKLIGHT_LEVELS
 #define BACKLIGHT_LEVELS 7
 #define BACKLIGHT_PIN B6
 #define BACKLIGHT_BREATHING
 #define BREATHING_PERIOD 6
-
-/* Underlight configuration
- */
-
-#define RGB_DI_PIN E2
-#define RGBLIGHT_ANIMATIONS
-#define RGBLED_NUM 8     // Number of LEDs
-#define RGBLIGHT_HUE_STEP 10
-#define RGBLIGHT_SAT_STEP 17
-#define RGBLIGHT_VAL_STEP 17
-
-/*
- * Feature disable options
- *  These options are also useful to firmware size reduction.
- */
-
-/* disable debug print */
-//#define NO_DEBUG
-
-/* disable print */
-#define NO_PRINT
-
-/* disable action features */
-//#define NO_ACTION_LAYER
-//#define NO_ACTION_TAPPING
-//#define NO_ACTION_ONESHOT
-//#define NO_ACTION_MACRO
-//#define NO_ACTION_FUNCTION
-
 #define TAPPING_TERM 200
 
 
